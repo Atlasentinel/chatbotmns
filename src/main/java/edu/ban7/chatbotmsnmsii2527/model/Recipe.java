@@ -32,4 +32,6 @@ public class Recipe {
     @ManyToMany
     protected List<Tag> tags = new ArrayList<>();
 
+    private int returnCount = 0;
+
 }

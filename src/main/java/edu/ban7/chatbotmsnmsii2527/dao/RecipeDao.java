@@ -24,5 +24,7 @@ public interface RecipeDao extends JpaRepository<Recipe,Integer> {
             "WHERE r.name = :name")
     int countTagByRecipeName(@Param("name") String name);
 
+    List<Recipe> findAllByOrderByReturnCountDesc();
+
     record RecipeCount (String name, long count){}
 }

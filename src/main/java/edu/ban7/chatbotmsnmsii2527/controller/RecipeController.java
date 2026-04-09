@@ -24,6 +24,11 @@ public class RecipeController {
         return recipeDao.findAll();
     }
 
+    @GetMapping("/recipe/stats")
+    public List<Recipe> getStats() {
+        return recipeDao.findAllByOrderByReturnCountDesc();
+    }
+
     @GetMapping("/recipe/{id}")
     public ResponseEntity<Recipe> get(@PathVariable int id) {
         Optional<Recipe> optionalRecipe = recipeDao.findById(id);

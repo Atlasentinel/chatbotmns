@@ -18,3 +18,12 @@ INSERT INTO recipe_tags (recipe_id, tags_id) VALUES
         (2, 1),
         (3, 2),
         (3, 3);
+
+INSERT INTO question (content, answer, create, user_id) VALUES
+                                                            ('Je veux quelque chose de rapide', 'Je vous recommande le Buddha Bowl !', NOW(), 2),
+                                                            ('Une recette végétarienne épicée ?', 'Le Curry de lentilles est parfait pour vous.', NOW(), 3);
+
+-- Question <-> includedTags
+INSERT INTO question_included_tags (question_id, included_tags_id) VALUES
+                                                                       (1, 4),
+                                                                       (2, 1), (2, 5);

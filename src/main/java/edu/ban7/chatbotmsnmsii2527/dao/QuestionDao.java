@@ -8,5 +8,5 @@ import java.util.*;
 
 @Repository
 public interface QuestionDao extends JpaRepository<Question, Integer> {
-    List<Question> findByUserId(Integer userId);
+    List<Question> findQuestionBy(Integer userId);
 }
